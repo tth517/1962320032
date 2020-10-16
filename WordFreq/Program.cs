@@ -32,6 +32,8 @@ namespace WordFreq
                 else
                 {
                     dict.Add(word, 1);
+
+                    //2020年10月16日15:58:07
                 }
             }
             List<Tuple<int, string>> list = new List<Tuple<int, string>>(MAX_WORD_NUM);
@@ -45,12 +47,15 @@ namespace WordFreq
             {
                 Console.WriteLine(list[i].Item2 + " " + list[i].Item1);
                 count++;
+
                 if (count > 10) break;
             }
             sr.Close();
             sw.Stop();
             TimeSpan ts = sw.Elapsed;
             Console.WriteLine("程序总共用时{0}s",ts.TotalSeconds);
+
+
         }
     }
 }
